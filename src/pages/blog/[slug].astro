@@ -1,0 +1,45 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+
+  return posts.map((post) => ({
+    params: {
+      slug: post.id,
+    },
+
+    props: {
+      post,
+    },
+  }));
+}
+
+const { post } = Astro.props;
+
+const { Content } = await render(post);
+---
+
+<Layout title={post.data.title}>
+
+  <a
+    href="/blog"
+    class="text-zinc-500 hover:text-zinc-400 transition"
+  >
+    ← 戻る
+  </a>
+
+  <h1 class="text-5xl font-bold mt-6 mb-4">
+    {post.data.title}
+  </h1>
+
+  <p class="text-zinc-500 mb-10">
+    {post.data.date.toLocaleDateString("ja-JP")}
+  </p>
+
+  <article class="prose prose-invert">
+    <Content />
+  </article>
+
+</Layout>

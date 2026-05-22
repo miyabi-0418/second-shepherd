@@ -1,0 +1,73 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="好きなもの">
+
+  <h1 class="text-4xl font-bold mb-10">
+    好きなもの
+  </h1>
+
+  <p class="mb-10 text-zinc-700">
+    好きな音楽やVtuberなど。
+  </p>
+
+  <section class="space-y-6">
+
+    <!-- 音楽 -->
+    <a
+      href="/music"
+      class="
+        block
+        border
+        border-emerald-300
+        bg-emerald-50
+
+        rounded-2xl
+        p-6
+
+        hover:bg-emerald-100
+        transition
+      "
+    >
+
+      <h2 class="text-2xl font-bold mb-2">
+        音楽
+      </h2>
+
+      <p class="text-zinc-700">
+        夜に聴きたくなる曲など。
+      </p>
+
+    </a>
+
+    <!-- Vtuber -->
+    <a
+      href="/vtuber"
+      class="
+        block
+        border
+        border-emerald-300
+        bg-emerald-50
+
+        rounded-2xl
+        p-6
+
+        hover:bg-emerald-100
+        transition
+      "
+    >
+
+      <h2 class="text-2xl font-bold mb-2">
+        Vtuber
+      </h2>
+
+      <p class="text-zinc-700">
+        好きな配信者や思い出。
+      </p>
+
+    </a>
+
+  </section>
+
+</Layout>
