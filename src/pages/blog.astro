@@ -22,7 +22,7 @@ const posts = await getCollection("blog");
           </p>
 
           <a
-            href={`${import.meta.env.BASE_URL}/blog/${post.id}`}
+            href={`${import.meta.env.BASE_URL}blog/${post.id}`}
             class="text-xl hover:text-zinc-400 transition"
           >
             {post.data.title}
