@@ -34,6 +34,18 @@ const musics = [
     
     youtube: "QiSE1n_X4qU",
   }
+
+  /*
+  {
+    title: "",
+    artist: "",
+    tags: ["", ""],
+
+    comment:
+      "",
+    youtube: "",
+  },
+  */
 ];
 
 //タイトル順ソート
@@ -96,7 +108,7 @@ musics.sort((a,b) =>
           </div>
 
           <!-- タグ -->
-          <div class="flex gap-2 flex-wrap mb-6">
+          <div class="flex gap-2 flex-wrap mt-4 mb-6">
 
             {
               music.tags.map((tag) => (
