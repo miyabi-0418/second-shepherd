@@ -22,7 +22,7 @@ import Layout from "../layouts/Layout.astro";
         transition
       "
     >
-      好きな音楽
+      音楽
     </a>
 
     <a
@@ -40,6 +40,21 @@ import Layout from "../layouts/Layout.astro";
       Vtuber
     </a>
 
+    <a
+      href={`${import.meta.env.BASE_URL}/favorites/movie`}
+      class="
+        block
+        border
+        border-zinc-300
+        rounded-2xl
+        p-4
+        hover:bg-zinc-100
+        transition
+      "
+    >
+      映画
+    </a>
+      
   </div>
 
 </Layout>
