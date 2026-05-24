@@ -16,13 +16,24 @@ const musics = [
   {
     title: "バース・デイ",
     artist: "浮遊信号",
-    tags: ["アゲ", "original"],
+    tags: ["アゲ", "Vtuber", "original"],
 
     comment:
       "🎂",
 
     youtube: "QqNPP0shiYQ",
   },
+
+  {
+    title: "Reply from超かぐや姫！",
+    artist: "かぐや(cv.夏吉ゆうこ)",
+    tags: ["アゲ", "cover"],
+
+    comment:
+      "劇中で流れたとき確実に涙腺が崩壊する。",
+    
+    youtube: "QiSE1n_X4qU",
+  }
 ];
 
 //タイトル順ソート
@@ -66,6 +77,24 @@ musics.sort((a,b) =>
             {music.artist}
           </p>
 
+          <!-- コメント -->
+          <p class="text-zinc-800 mb-6 leading-relaxed">
+            {music.comment}
+          </p>
+
+          <!-- YouTube -->
+          <div class="aspect-video">
+
+            <iframe
+              class="w-full h-full rounded-xl"
+              src={`https://www.youtube.com/embed/${music.youtube}`}
+              title={music.title}
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+
+          </div>
+
           <!-- タグ -->
           <div class="flex gap-2 flex-wrap mb-6">
 
@@ -87,24 +116,6 @@ musics.sort((a,b) =>
 
               ))
             }
-          </div>
-
-          <!-- コメント -->
-          <p class="text-zinc-800 mb-6 leading-relaxed">
-            {music.comment}
-          </p>
-
-          <!-- YouTube -->
-          <div class="aspect-video">
-
-            <iframe
-              class="w-full h-full rounded-xl"
-              src={`https://www.youtube.com/embed/${music.youtube}`}
-              title={music.title}
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-
           </div>
 
         </section>
