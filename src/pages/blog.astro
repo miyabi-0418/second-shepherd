@@ -3,6 +3,12 @@ import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
 const posts = await getCollection("blog");
+
+// 新しい順
+posts.sort(
+  (a, b) =>
+    b.data.date.getTime() - a.data.date.getTime()
+);
 ---
 
 <Layout title="日記">
